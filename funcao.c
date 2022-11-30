@@ -1,30 +1,21 @@
 #include <stdio.h>
 
-double maior(int a, int b){
+double delta(double a, double b, double c){
 
 
-    if(a > b){
-        return a;
+    double delta = (b*b) - (4 * a * c);
+    return delta;
 
-    }else{
-        return b;
-
-    }
 
 
 }
 
-
-
 int main(){
-    int a, b, maior;
 
-   scanf("%d", &a);
-   scanf("%d", &b);
+    double a, b, c;
 
-   maior = (a, b);
-
-   printf("%d", maior);
+    scanf("%lf%lf%lf", &a, &b, &c);
+    printf("%.2lf", delta(a, b, c));
 
 
     return 0;
