@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+
+    char morfom[100];
+    char comida[100];
+    int tamanho,i, resp;
+    scanf("%[^\n]%*c", morfom);
+    scanf("%d",&tamanho);
+
+    for(i = 0 ; i < tamanho; i++){
+        scanf("%s", comida);
+        resp = strcmp(comida, "burrito");
+        if(resp == 0) {
+            strcpy (morfom, "foguento");
+        }else if(resp != 0) {
+            resp = strcmp(comida, "alface");
+            if(resp == 0) {
+               strcpy (morfom, "pranta");
+            }else if(resp != 0) {
+                resp = strcmp(comida, "cerveja");
+                if(resp == 0) {
+                    strcpy (morfom, "aguado");
+                }
+            }
+        }
+
+    }
+    printf("%s",morfom);
+
+    return 0;
+}
