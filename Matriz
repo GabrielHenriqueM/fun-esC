@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+
+
+    int i, j, q, a, b, c, d, soma = 0, red = 0;
+
+    scanf("%d %d", &i, &j);
+    int matrix[i][j];
+
+    for( a = 1; a <= i; a++) {
+        for( b = 1; b <= j; b++) {
+            scanf("%d", &matrix[a][b]);
+        }
+    }
+
+    scanf("%d %d", &c, &d);
+    for( a = 1; a <= i; a++) {
+        for( b = 1; b <= j; b++) {
+            if(a == c && b == d) {
+              red = matrix[a][b];
+            }
+            if(a == c) {
+                soma += matrix[a][b];
+            }
+            if(b == d) {
+                soma += matrix[a][b];
+            }
+        }
+    }
+
+    printf("%d\n",soma-red);
+
+
+
+
+
+
+    return 0;
+}
